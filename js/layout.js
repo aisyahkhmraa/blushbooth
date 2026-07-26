@@ -3,7 +3,7 @@ const next = document.querySelector(".layout-next");
 const prev = document.querySelector(".layout-prev");
 
 let position = 0;
-const maxSlide = 300;
+const maxSlide = 800;
 
 next.addEventListener("click", () => {
     if (position > -maxSlide) {

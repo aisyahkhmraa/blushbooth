@@ -175,14 +175,15 @@ h2 {
 /*button*/
 .layout-prev,
 .layout-next {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 45px;
     border: none;
     border-radius: 50%;
     background-color: #E8D3D3;
-    color: #642D3E;
+    color: #642d3e96;
     font-size: 20px;
     cursor: pointer; 
+    font-weight: 700;
 }
 
 /* footer section */
