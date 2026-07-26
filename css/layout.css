@@ -110,19 +110,38 @@ h2 {
     gap: 40px;
 }
 
-.layout-camera .layout-card img {
+.layout-camera .slider-container .slider-track .layout-card img {
     width: 180px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    min-width: 180px;
 }
 
-.layout-camera .layout-card2 img {
+.layout-camera .slider-container .slider-track .layout-card2 img {
     width: 103px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    min-width: 103px;
 }
 
-.layout-camera .layout-card3 img {
+.layout-camera .slider-container .slider-track .layout-card3 img {
     width: 80px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    min-width: 80px;
+}
+
+/*slider*/
+
+.slider-container {
+    width: 900px; 
+    overflow: hidden;
+}
+
+
+.slider-track {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    gap: 130px;
 }
 
 .dots {

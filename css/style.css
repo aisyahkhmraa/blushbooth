@@ -118,8 +118,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
-    gap: 70px;
-    margin-top: -37px;
+    gap: 50px;
+    margin-top: -40px;
 }
 
 .hero-content .hero-text1 {
@@ -143,16 +143,17 @@ body {
 .hero-content .hero-title1 {
     font-family: var(--font-heading);
     font-weight: bold;
-    font-size: 70px;
+    font-size: 80px;
     color: #642D3E;
 }
 
 .hero-content .hero-title2 {
     font-family: var(--font-heading);
     font-weight: bold;
-    font-size: 70px;
+    font-size: 80px;
     color: #d63459;
     margin-top: -40px;
+    margin-bottom: 40px;
     font-style: italic;
     height: 90px;
 }
@@ -202,6 +203,7 @@ h2 {
     margin: 10px;
     font-size: 16px;
     color: #642D3E;
+    font-weight: 500;
 }
 
 @keyframes marquee {
