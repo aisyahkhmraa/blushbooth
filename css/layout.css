@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-primary: "DM Sans", sans-serif;
+    --font-heading: "Playfair Display", serif;
+    --font-mono: "DM Mono", monospace;
+
+    --bg-color: #F9E6E7;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+/* navigation bar */
+
+.navigation {
+    background-color: #FEF4EA ;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+}
+
+.navigation p {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 25px;
+    color: #D63459;
+    padding: 10px 20px;
+    margin-left: 20px;
+}
+
+.navigation nav ul {
+    display: flex;
+    gap: 100px;
+}
+
+.navigation nav ul li {
+    list-style: none;
+}
+
+.navigation nav ul li a {
+    text-decoration: none;
+    color: #642D3E;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 13px;
+    padding: 10px 20px;
+}
+
+.navigation .logo-github img {
+    width: 57px;
+    height: 57px;
+    object-fit: cover;
+    margin-top: 8px;
+    margin-right: 50px;
+}
