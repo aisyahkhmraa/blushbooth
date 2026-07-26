@@ -63,3 +63,231 @@ body {
     margin-top: 8px;
     margin-right: 50px;
 }
+/*title*/
+
+h2 {
+    font-family: var(--font-heading); 
+    font-size: 35px; 
+    color: #642D3E;
+}
+
+.card .title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/*layouts*/
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    border: 1px solid #7a4b58ab;
+    border-radius: 20px;
+    background-color: #FFF8F1;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    
+    margin: 37px 150px;
+    padding: 30px;
+    padding-top: 10px;
+    gap: 10px;
+}
+
+.layout-camera {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 0;
+    gap: 40px;
+}
+
+.layout-camera .layout-card img {
+    width: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.layout-camera .layout-card2 img {
+    width: 103px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.layout-camera .layout-card3 img {
+    width: 80px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.dots {
+    color: #E8D3D3;
+    font-size: 20px;
+    padding: 20px;
+    padding-top: 0;
+}
+
+.card a {
+    align-self: center;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    background: linear-gradient(
+        to top,
+        #D63459 0%,
+        #DF6871 41%,
+        #E9A08B 78%,
+        #F3D9A6 100%
+    );
+    border-radius: 999px;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 120px;
+    height: 40px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+/*button*/
+.layout-prev,
+.layout-next {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #E8D3D3;
+    color: #642D3E;
+    font-size: 20px;
+    cursor: pointer; 
+}
+
+/* footer section */
+
+.newsletter-main {
+    padding: 50px;
+    gap: 0;
+    background-color: #723647;
+}
+
+.newsletter-main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+}
+
+.newsletter-main .container .content-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.newsletter-main .container .content-left h2 {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: 60px;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 700px;
+    line-height: 90px;
+}
+
+.newsletter-main .container .content-left .subtitle {
+    font-family: var(--font-primary);
+    font-weight: 200;
+    font-size: 15px;
+    color: #FFFFFF;
+    line-height: 50px;
+}
+
+.newsletter-main .container .content-left .description {
+    font-family: var(--font-primary);
+    font-weight: 200;
+    font-size: 20px;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 700px;
+    line-height: 50px;
+}
+
+.content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.content-right p {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 13px;
+    color: #FFFFFF;
+    line-height: 50px;
+}
+
+.newsletter-main .container .content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.newsletter-main .container .content-right .subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter-main .container .content-right .subscribe-form input {
+    font-family: var(--font-primary);
+    font-weight: 200;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    width: 350px;
+    background-color: #f5ddb900;
+}
+
+.newsletter-main .container .content-right .subscribe-form button {
+    background-color: #EED072;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.newsletter-main .container .content-right .subscribe-form button img {
+    width: 20px;
+    height: 20px;
+    padding-top: 3px;
+    padding-right: 3px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #642D3E;
+}
+
+.newsletter-logo {
+    padding: 20px;
+    padding-left: 65px;
+    background-color: #642D3E;
+}
+
+.newsletter-logo h2 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: 26px;
+    color: #FFFFFF;
+}
