@@ -1,212 +1,227 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --font-primary: "DM Sans", sans-serif;
-    --font-heading: "Playfair Display", serif;
-    --font-mono: "DM Mono", monospace;
+  --font-primary: "DM Sans", sans-serif;
+  --font-heading: "Playfair Display", serif;
+  --font-mono: "DM Mono", monospace;
 
-    --bg-color: #F9E6E7;
+  --bg-color: #f9e6e7;
 }
 
 body {
-    font-family: var(--font-primary);
-    background-color: var(--bg-color);
-    line-height: 1.6;
+  font-family: var(--font-primary);
+  background-color: var(--bg-color);
+  line-height: 1.6;
 }
 
 /* navigation bar */
 
 .navigation {
-    background-color: #FEF4EA ;
+  background-color: #fef4ea;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 65px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .navigation p {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 25px;
-    color: #D63459;
-    padding: 10px 20px;
-    margin-left: 20px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 25px;
+  color: #d63459;
+  padding: 10px 20px;
+  margin-left: 20px;
 }
 
 .navigation nav ul {
-    display: flex;
-    gap: 100px;
+  display: flex;
+  gap: 100px;
 }
 
 .navigation nav ul li {
-    list-style: none;
+  list-style: none;
 }
 
 .navigation nav ul li a {
-    text-decoration: none;
-    color: #642D3E;
-    font-family: var(--font-primary);
-    font-weight: 500;
-    font-size: 13px;
-    padding: 10px 20px;
+  text-decoration: none;
+  color: #642d3e;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 13px;
+  padding: 10px 20px;
 }
 
 .navigation .logo-github img {
-    width: 57px;
-    height: 57px;
-    object-fit: cover;
-    margin-top: 8px;
-    margin-right: 50px;
+  width: 57px;
+  height: 57px;
+  object-fit: cover;
+  margin-top: 8px;
+  margin-right: 50px;
 }
 
 h2 {
-    font-family: var(--font-heading); 
-    font-size: 35px; 
-    color: #642D3E;
+  font-family: var(--font-heading);
+  font-size: 35px;
+  color: #642d3e;
 }
 
 /*camera*/
 .camera-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .camera-container {
-    width: 760px;
-    height: 570px;
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: #642D3E;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-    border: 1px solid #642D3E;
+  width: 760px;
+  height: 570px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #642d3e;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid #642d3e;
 }
 
 #camera {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #camera.mirrored {
-    transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 /*button atas*/
 
 .camera-main .button-up {
-    display: flex;
-    gap: 30px;
-    padding: 30px;
+  display: flex;
+  gap: 30px;
+  padding: 30px;
 }
 
 .button-up select {
-    background-color: #D63459;
-    border: none;
-    font-family: var(--font-primary);
-    font-size: 17px;
-    font-weight: 500;
-    color: white;
-    margin: 4px;
-    width: 85px;
-    height: 38px;
-    border-radius: 9999px;
-    text-align: center;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background-color: #d63459;
+  border: none;
+  font-family: var(--font-primary);
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  margin: 4px;
+  width: 85px;
+  height: 38px;
+  border-radius: 9999px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 }
 
 .button-up .insert-image {
-    padding: 10px;
+  padding: 10px;
 }
 
 .button-up .insert-image label {
-    background-color: #D63459;
-    border: none;
-    font-family: var(--font-primary);
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 9999px;
-    text-align: center;
-    width: 160px;
-    height: 38px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background-color: #d63459;
+  border: none;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 9999px;
+  text-align: center;
+  width: 160px;
+  height: 38px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 }
 
 /*button bawah*/
 .button-bottom {
-    display: flex;
-    padding: 30px;
-    gap: 40px;
+  display: flex;
+  padding: 30px;
+  gap: 40px;
 }
 
 #mirrorButton {
-    background-color: #D63459;
-    border: none;
-    font-family: var(--font-primary);
-    font-size: 17px;
-    font-weight: 500;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 9999px;
-    text-align: center;
-    width: 140px;
-    height: 38px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background-color: #d63459;
+  border: none;
+  font-family: var(--font-primary);
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 9999px;
+  text-align: center;
+  width: 140px;
+  height: 38px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 }
 
 #startButton {
-    background: linear-gradient(
-        to right,
-        #D63459 30%,
-        #E06C73 65%,
-        #EAA98F 90%,
-        #F3D9A6 100%
-    );
-    border: none;
-    font-family: var(--font-primary);
-    font-size: 17px;
-    font-weight: 500;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 9999px;
-    text-align: center;
-    width: 140px;
-    height: 38px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    to right,
+    #d63459 30%,
+    #e06c73 65%,
+    #eaa98f 90%,
+    #f3d9a6 100%
+  );
+  border: none;
+  font-family: var(--font-primary);
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 9999px;
+  text-align: center;
+  width: 140px;
+  height: 38px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+#nextButton {
+  background-color: #d63459;
+  border: none;
+  font-family: var(--font-primary);
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 9999px;
+  text-align: center;
+  width: 140px;
+  height: 38px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 }
 
 /*camera*/
 
 .preview-camera {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .camera-main .preview-camera .preview {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .camera-main .preview-camera .preview .layout-card {
-    width: 190px;
-    height: 130px;
-    
-    border-radius: 10px;
-    background-color: #642D3E;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  width: 190px;
+  height: 130px;
+
+  border-radius: 10px;
+  background-color: #642d3e;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 #preview-Photo {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }

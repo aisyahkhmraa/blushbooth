@@ -1,76 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- css -->
-    <link rel="stylesheet" href="css/camera.css">
+    <link rel="stylesheet" href="css/camera.css" />
     <!-- favicon -->
-    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
     <title>BlushBooth</title>
-    
-</head>
-<body>
+  </head>
+  <body>
     <header>
-    <div class="navigation">
+      <div class="navigation">
         <p>BlushBooth</p>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
         </nav>
-        <a href="https://github.com/aisyahkhmraa" class="logo-github" target="_blank" rel="noopener noreferrer">
-            <img src="assets/icons/github.png" alt="My Github">
+        <a
+          href="https://github.com/aisyahkhmraa"
+          class="logo-github"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="assets/icons/github.png" alt="My Github" />
         </a>
-    </div>
+      </div>
     </header>
     <main>
-        <section class="camera-main">
-            <div class="button-up">
-                <select name="timer">
-                    <option value="3s">3s</option>
-                    <option value="5s">5s</option>
-                </select>
-                <div class="insert-image">
-                    <label for="insertImage" style="cursor: pointer;">
-                        + Insert Image
-                    </label>
-                    <input type="file" id="insertImage" accept="image/*" style="display: none;">
-                </div>
+      <section class="camera-main">
+        <div class="button-up">
+          <select name="timer">
+            <option value="3s">3s</option>
+            <option value="5s">5s</option>
+          </select>
+          <div class="insert-image">
+            <label for="insertImage" style="cursor: pointer">
+              + Insert Image
+            </label>
+            <input
+              type="file"
+              id="insertImage"
+              accept="image/*"
+              style="display: none"
+            />
+          </div>
+        </div>
+        <div class="preview-camera">
+          <div class="camera-container">
+            <video id="camera" autoplay playsinline></video>
+          </div>
+          <div class="preview">
+            <div class="layout-card" data-layout="1">
+              <img src="assets/layouts/1.jpg" alt="1 photo layout" />
             </div>
-            <div class="preview-camera">
-                <div class="camera-container">
-                    <video id="camera" autoplay playsinline></video>
-                </div>
-                <div class="preview">
-                    <div class="layout-card" data-layout="1">
-                        <img src="assets/layouts/1.jpg" alt="1 photo layout">
-                    </div>
 
-                    <div class="layout-card" data-layout="2">
-                        <img src="assets/layouts/2.jpg" alt="2 photo layout">
-                    </div>
-
-                    <div class="layout-card" data-layout="3">
-                        <img src="assets/layouts/3.jpg" alt="3 photo layout">
-                    </div>
-
-                    <div class="layout-card" data-layout="4">
-                        <img src="assets/layouts/4.jpg" alt="4 photo layout">
-                    </div>
-                </div>
+            <div class="layout-card" data-layout="2">
+              <img src="assets/layouts/2.jpg" alt="2 photo layout" />
             </div>
-            <div class="button-bottom">
-                <button id="mirrorButton">Mirror</button>
-                <button id="startButton">START</button>
+
+            <div class="layout-card" data-layout="3">
+              <img src="assets/layouts/3.jpg" alt="3 photo layout" />
             </div>
-        </section>
+
+            <div class="layout-card" data-layout="4">
+              <img src="assets/layouts/4.jpg" alt="4 photo layout" />
+            </div>
+          </div>
+        </div>
+        <div class="button-bottom">
+          <button id="mirrorButton">Mirror</button>
+          <button id="startButton">START</button>
+          <button id="nextButton">Next</button>
+        </div>
+      </section>
     </main>
     <script src="js/camera.js"></script>
-</body>
+  </body>
+</html>
