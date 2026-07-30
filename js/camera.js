@@ -1,27 +1,39 @@
 const camera = document.querySelector("#camera");
 const mirrorButton = document.querySelector("#mirrorButton");
 const startButton = document.querySelector("#startButton");
+const retakeButton = document.querySelector("#retakeButton");
 const layout = Number(localStorage.getItem("layout"));
+const previewPhoto = document.getElementById("preview-photo");
 const previewContainer = document.getElementById("preview-container");
 const timerSelect = document.querySelector('select[name="timer"]');
 const photos = [];
 let totalPhotos = layout;
 let currentPhoto = 0;
-let timer = parseInt(timerSelect.value);
 
 createPreview();
 
 console.log(layout);
 console.log(totalPhotos);
 
-const interval = setInterval(() => {
-  console.log(timer);
-  timer--;
-  if (timer === 0) {
-    clearInterval(interval);
-    capturePhoto();
-  }
-}, 1000);
+function startCountdown() {
+  let timer = parseInt(timerSelect.value);
+
+  const interval = setInterval(() => {
+    console.log(timer);
+    timer--;
+    if (timer === 0) {
+      clearInterval(interval);
+      capturePhoto();
+      previewPhoto.style.display = "inline-block";
+      currentPhoto++;
+      if (currentPhoto < totalPhotos) {
+        startCountdown();
+      } else {
+        finishSession();
+      }
+    }
+  }, 1000);
+}
 
 function capturePhoto() {
   const canvas = document.createElement("canvas");
@@ -67,12 +79,13 @@ mirrorButton.addEventListener("click", () => {
 });
 
 startButton.addEventListener("click", () => {
-  if (currentPhoto < totalPhotos) {
-    capturePhoto();
-    currentPhoto++;
-    console.log(currentPhoto);
-    if (currentPhoto === totalPhotos) {
-      console.log("All photos are finished");
-    }
-  }
+  startButton.disabled = true;
+
+  startCountdown();
 });
+
+function finishSession() {
+  nextButton.style.display = "inline-block";
+  retakeButton.style.display = "inline-block";
+  startButton.style.display = "none";
+}
