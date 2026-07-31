@@ -254,6 +254,22 @@ h2 {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 }
 
+#deleteButton {
+  display: none;
+  background-color: #d63459;
+  border: none;
+  font-family: var(--font-primary);
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 9999px;
+  text-align: center;
+  width: 140px;
+  height: 38px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
 #nextButton {
   display: none;
   background: linear-gradient(
@@ -278,9 +294,17 @@ h2 {
 
 /*camera*/
 
+#progressText {
+  font-family: var(--font-primary);
+  font-size: 22px;
+  font-weight: 600;
+  color: #642d3e;
+  margin-bottom: 15px;
+}
+
 .preview-camera {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 #preview-photo {
@@ -289,14 +313,9 @@ h2 {
 
 #preview-container {
   width: 180px;
-  height: 130px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-
-  border-radius: 10px;
-  background-color: #642d3e;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 #preview-container img {
@@ -304,4 +323,6 @@ h2 {
   height: auto;
   border-radius: 12px;
   object-fit: cover;
+  background-color: #642d3e;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
 }
