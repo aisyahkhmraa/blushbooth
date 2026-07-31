@@ -8,14 +8,12 @@ const previewContainer = document.getElementById("preview-container");
 const timerSelect = document.querySelector('select[name="timer"]');
 const countdown = document.querySelector("#countdown");
 const flash = document.querySelector("#flash");
+const insertImage = document.querySelector("#insertImage");
 const photos = [];
 let totalPhotos = layout;
 let currentPhoto = 0;
 
 createPreview();
-
-console.log(layout);
-console.log(totalPhotos);
 
 function startCountdown() {
   let timer = parseInt(timerSelect.value);
@@ -123,4 +121,9 @@ function finishSession() {
 
 retakeButton.addEventListener("click", () => {
   retakePhotos();
+});
+
+nextButton.addEventListener("click", () => {
+  localStorage.setItem("photos", JSON.stringify(photos));
+  window.location.href = "edit.html";
 });
