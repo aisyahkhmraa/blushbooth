@@ -6,6 +6,8 @@ const layout = Number(localStorage.getItem("layout"));
 const previewPhoto = document.getElementById("preview-photo");
 const previewContainer = document.getElementById("preview-container");
 const timerSelect = document.querySelector('select[name="timer"]');
+const countdown = document.querySelector("#countdown");
+const flash = document.querySelector("#flash");
 const photos = [];
 let totalPhotos = layout;
 let currentPhoto = 0;
@@ -17,13 +19,16 @@ console.log(totalPhotos);
 
 function startCountdown() {
   let timer = parseInt(timerSelect.value);
+  countdown.style.display = "block";
 
   const interval = setInterval(() => {
-    console.log(timer);
+    startButton.style.display = "none";
+    countdown.textContent = timer;
     timer--;
     if (timer === 0) {
       clearInterval(interval);
       capturePhoto();
+      countdown.style.display = "none";
       previewPhoto.style.display = "inline-block";
       currentPhoto++;
       if (currentPhoto < totalPhotos) {
@@ -35,15 +40,39 @@ function startCountdown() {
   }, 1000);
 }
 
+function retakePhotos() {
+  currentPhoto = 0;
+  photos.length = 0;
+
+  const previews = previewContainer.querySelectorAll("img");
+
+  previews.forEach((img) => {
+    img.src = "";
+  });
+
+  setTimeout(() => {
+    startCountdown();
+  }, 1500);
+
+  startButton.disabled = false;
+  nextButton.style.display = "none";
+}
+
 function capturePhoto() {
   const canvas = document.createElement("canvas");
 
   canvas.width = camera.videoWidth;
   canvas.height = camera.videoHeight;
 
+  flash.classList.add("flash-effect");
+
   const ctx = canvas.getContext("2d");
 
   ctx.drawImage(camera, 0, 0);
+
+  setTimeout(() => {
+    flash.classList.remove("flash-effect");
+  }, 200);
 
   const imageData = canvas.toDataURL("image/png");
 
@@ -81,11 +110,17 @@ mirrorButton.addEventListener("click", () => {
 startButton.addEventListener("click", () => {
   startButton.disabled = true;
 
-  startCountdown();
+  setTimeout(() => {
+    startCountdown();
+  }, 1500);
 });
 
 function finishSession() {
   nextButton.style.display = "inline-block";
+
   retakeButton.style.display = "inline-block";
-  startButton.style.display = "none";
 }
+
+retakeButton.addEventListener("click", () => {
+  retakePhotos();
+});
