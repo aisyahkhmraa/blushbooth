@@ -36,42 +36,49 @@
           <img src="assets/icons/github.png" alt="My Github" />
         </a>
       </div>
-      <main>
-        <div class="title">
-          <h2>
-            Customize your
-            <span style="font-weight: 700; font-style: italic; color: #679e86"
-              >photo.</span
-            >
-          </h2>
-        </div>
-        <section class="card">
-          <div class="preview-photo">
-            <p id="sub-title">Preview</p>
-            <canvas id="previewCanvas"></canvas>
-          </div>
-          <div class="frame-edit">
-            <div class="customize-color">
-              <p id="sub-title">Frame Color</p>
-              <div id="color" class="color-options">
-                <button class="color-option"></button>
-                <button class="color-option"></button>
-                <button class="color-option"></button>
-                <button class="color-option"></button>
-                <button class="color-option"></button>
-                <button class="color-option"></button>
-              </div>
-              <p id="sub-title">Frame Template</p>
-              <div id="template"></div>
-            </div>
-          </div>
-        </section>
-        <div class="button">
-          <button id="dateButton">Add date</button>
-          <button id="downloadButton">DOWNLOAD</button>
-        </div>
-      </main>
-      <footer></footer>
     </header>
+    <main>
+      <div class="title">
+        <h2>
+          Customize your
+          <span style="font-weight: 700; font-style: italic; color: #679e86"
+            >photo.</span
+          >
+        </h2>
+      </div>
+      <section class="card">
+        <div class="preview-photo">
+          <p id="sub-title">Preview</p>
+          <canvas id="previewCanvas"></canvas>
+        </div>
+        <div class="frame-edit">
+          <div class="customize-color">
+            <p id="sub-title">Frame Color</p>
+            <div id="color" class="color-options">
+              <button
+                class="color-option"
+                data-frame="brown-polkadot.png"
+              ></button>
+              <button class="color-option" data-frame="leopard.png"></button>
+              <button class="color-option" data-frame="pink-lines.png"></button>
+              <button class="color-option" data-frame="sofa.png"></button>
+              <button
+                class="color-option"
+                data-frame="yellow-pattern.png"
+              ></button>
+              <button class="color-option" data-frame="zebra.png"></button>
+            </div>
+            <p id="sub-title">Frame Template</p>
+            <div id="template"></div>
+          </div>
+        </div>
+      </section>
+      <div class="button">
+        <button id="dateButton">Add date</button>
+        <button id="downloadButton">DOWNLOAD</button>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="js/edit.js" defer></script>
   </body>
 </html>
