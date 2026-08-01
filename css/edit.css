@@ -97,6 +97,30 @@ h2 {
   grid-template-columns: 400px 1fr;
 }
 
+.customize-scroll {
+  height: 470px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.customize-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.customize-scroll::-webkit-scrollbar-track {
+  background: #ece3d8;
+  border-radius: 20px;
+}
+
+.customize-scroll::-webkit-scrollbar-thumb {
+  background: #c79ca7;
+  border-radius: 20px;
+}
+
+.customize-scroll::-webkit-scrollbar-thumb:hover {
+  background: #d63459;
+}
+
 /*button*/
 
 .button {
@@ -180,7 +204,8 @@ h2 {
 .color-options {
   display: flex;
   gap: 10px;
-  padding-bottom: 20px;
+  padding: 20px;
+  padding-left: 0;
 }
 
 .color-option {
@@ -224,4 +249,31 @@ h2 {
   background-image: url("../assets/frames/one-photo/zebra.png");
   background-size: cover;
   border: 1px solid #642d3e59;
+}
+
+/*template options*/
+
+#template {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.template-option {
+  width: 130px;
+  height: 190px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  background: #ddd;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.template-option:hover {
+  transform: scale(1.04);
 }
